@@ -16,7 +16,7 @@ Example output:
 *** STARTING COLLECTION 2022-09-24 - 2022-09-25 ***
 collector: starting collection for job: custom
 started jobId: 2dc2318c-8060-4855-be59-71875e8f5702
-done! all results for job custom saved to: .../unity_analytics_export/backup_storage/2022-09-24_2022-09-25
+done! all results for job custom saved to: .../backup_storage/2022-09-24_2022-09-25
 *** COMPLETE ***
 ```
 
