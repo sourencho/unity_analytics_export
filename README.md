@@ -13,7 +13,7 @@ Usage:
 This program does the following:
 
 1. Requests to export `custom` raw data from Unity Analytics using the HTTP API.
-2. Downloads the exported data into the directory specified in the format `<collection_path>/start-date_end-date`
+2. Downloads the exported data into several json files in the directory specified. A new direcotry will be created in the format `<collection_path>/start-date_end-date`.
 
 The configuration file must be a valid `json` file containing these parameters:
 
