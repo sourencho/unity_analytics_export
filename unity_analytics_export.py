@@ -53,6 +53,9 @@ def request_raw_analytics_dump(unity_project_id, unity_api_key, start_date, end_
 
     if r.status_code == 200:
         return r.json()['id']
+    else:
+        print(r.json())
+        exit(1)
 
     return None
 
@@ -150,7 +153,7 @@ def process_raw_dump(job_type, local_dump_directory, start_date, end_date):
         time.sleep(5)
 
     # make folders if they aren't there yet
-    destination_path = os.path.join(local_dump_directory, start_date + "_" + end_date)
+    destination_path = os.path.join(local_dump_directory, start_date + "_" + end_date + "/" + job_type)
     if not os.path.exists(destination_path):
         os.makedirs(destination_path)
 
@@ -162,6 +165,8 @@ print('')
 print(str(datetime.datetime.now()))
 print(f"""*** STARTING COLLECTION {START_DATE} - {END_DATE} ***""")
 
+process_raw_dump('appStart', CONFIG['collection_path'], START_DATE, END_DATE)
+process_raw_dump('appRunning', CONFIG['collection_path'], START_DATE, END_DATE)
 process_raw_dump('custom', CONFIG['collection_path'], START_DATE, END_DATE)
 
 print('*** COMPLETE ***')
