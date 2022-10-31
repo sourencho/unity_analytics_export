@@ -9,6 +9,16 @@ Usage:
 
 - The end data (exclusive) of the export. The date is expressed in YYYY-MM-DD format (ISO 8601). This is the date at which to close the query. When searching for the current day, use the following day’s date.
 
+Example output:
+
+```
+2022-10-10 14:05:55.685276
+*** STARTING COLLECTION 2022-09-24 - 2022-09-25 ***
+collector: starting collection for job: custom
+started jobId: 2dc2318c-8060-4855-be59-71875e8f5702
+done! all results for job custom saved to: .../backup_storage/2022-09-24_2022-09-25
+*** COMPLETE ***
+```
 
 This program does the following:
 
